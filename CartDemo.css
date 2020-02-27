@@ -1,0 +1,290 @@
+html {
+    height: 100%;
+    background-color: #EEE;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+p {
+    margin-bottom: 0;
+}
+.hidden {
+    display: none;
+}
+
+.MaterialCard {
+    background-color: white;
+    padding: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 7px 7px 15px 4px #E1E1E1;
+    box-shadow: 7px 7px 15px 4px #E1E1E1;
+}
+
+.pTable {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    padding-bottom: 1.3rem;
+    padding-top: 1.3rem;
+    border-bottom: 1px solid #ACACAC;
+}
+
+.pTable div {
+    box-sizing: border-box;
+    flex-grow: 1;
+    /* Default to full width padding: 0.8em 1.2em;*/
+    overflow: hidden;
+    /* Or flex might break list-style: none;
+    border: solid .3rem #f7f7f7;
+    background: #f7f7f7;*/
+    border: solid .3rem white;
+    background: white;
+    padding: .4rem;
+}
+
+
+.pTable__Image {
+    width: 25%;
+    min-width: 160px;
+}
+.pTable__Info {
+    width: 50%;
+    min-width: 380px;
+}
+.pTable__AddToCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#Qty {
+    flex-grow: unset;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    padding: .4rem;
+    text-align: center;
+    width: 100px;
+    box-sizing: border-box;
+}
+
+.pTable__AddToCart p {
+    margin-bottom: 3px;
+}
+
+.pTable__Image img {
+    width: 100%;
+}
+
+.AddToCartButton {
+    width: 100px;
+    height: 40px;
+    border: 0px;
+    background-color: #00630c;
+    color: white;
+}
+
+.PriceEach {
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+    color: #00630c;
+}
+
+.Desc {
+    color: #595959;
+    margin-top: 1rem;
+    font-size: .96rem;
+}
+
+#TopContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.TopContainer__Block {
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    color: black;
+    background-color: white;
+}
+
+#ShopCartBox {
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ShopCartRow {
+    /*display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;*/
+    display: flex;
+    justify-content: center;
+}
+
+.ShopCartRow div {
+    padding-left: .2rem;
+    padding-right: .2rem;
+
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+}
+
+.ShopCartRow__Name {
+    width: 70px;
+    text-align: right;
+    color: #ACACAC;
+    margin-left: 10px;
+
+}
+
+.ShopCartRow__Value {
+    min-width: 50px;
+}
+
+#Title p {
+    margin-top: .4rem;
+    color: #ACACAC;
+    font-size: .9rem;
+}
+
+#ViewCart {
+    display: flex;
+    justify-content: center;
+    border: 0px;
+    background-color: #afe3b7;
+}
+
+#ViewCart div {
+    margin: 10px;
+}
+
+#ViewCart img {
+    width: 40px;
+}
+
+#ViewCart__Text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Cart {
+    border: 4px dashed #afe3b7;
+    padding: .8rem;
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#Cart_Top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#Cart__Title {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+#Cart__Close {
+    background-color: #e3afaf;
+    border: 0;
+    font-size: 1.2rem;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#Cart__Instructions {
+    font-size: .9rem;
+    color: #5c5c5c;
+    margin-bottom: 10px;
+}
+
+#Cart_Bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.cTable {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 4px;
+    margin: 0px auto;
+    margin-bottom: 6px;
+}
+
+.cTable__Qty {
+    width: 50px;
+    text-align: center;
+}
+.cTable__Name {
+    width: 200px;
+    text-align: left;
+}
+.cTable__PriceEach {
+    width: 200px;
+    text-align: right;
+}
+
+.BGRowHighlight {
+    background-color: aliceblue;
+}
+
+.CartItemsHeader {
+    border-bottom: 1px solid black;
+}
+.CartQTY {
+    cursor: pointer;
+}
+.QtyEdit {
+    width: 20px;
+    padding: 4px;
+    text-align: center;
+}
+
+@media screen and (max-width:480px) {
+    #TopContainer {
+        flex-wrap: wrap;
+    }
+    #Title, #ShopCartBox {
+        flex: 2;
+    }
+
+}

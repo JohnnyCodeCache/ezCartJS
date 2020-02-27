@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ezCart Demo</title>
+
+    <link rel="stylesheet" href="CartDemo.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="TopContainer">
+        <div class="MaterialCard" id="Title">
+            <h2>ezCart Demo</h2>
+            <p>by JohnnyCodeCache</p>
+        </div>
+
+        <div class="MaterialCard" id="ShopCartBox">
+
+            <div id="ViewCartButtonBlock" class="hidden">
+                <button id="ViewCart" onclick="ShowCart()">
+                    <div><img src="pics/ShopCart.png"></div>
+                    <div id="ViewCart__Text">view<br />cart</div>
+                </button>
+            </div>
+
+            <div>
+                <div class="ShopCartRow">
+                    <div class="ShopCartRow__Name"># items : </div>
+                    <div class="ShopCartRow__Value" id="CartItemsNumber">0</div>
+                </div>
+                <div class="ShopCartRow">
+                    <div class="ShopCartRow__Name">cost : </div>
+                    <div class="ShopCartRow__Value" id="CartItemsCost">$0.00</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="MaterialCard hidden" id="Cart">
+        <div id="Cart_Top">
+            <p id="Cart__Title">Your Shopping Cart</p>
+            <button id="Cart__Close" onclick="HideCart()">X</button>
+        </div>
+        <div id="Cart__Instructions">
+            Click on the quantity below to change it.  If you change the quantity to zero,
+            the item will be removed from the cart.
+        </div>
+
+        <div id="Cart__AllItems"></div>
+
+        <div id="Cart_Bottom">
+            <img src="pics/PayPalButton.png" />
+            <button id="DeleteCart" onclick="DeleteCart()">
+                <div id="ViewCart__Text">delete cart</div>
+            </button>
+        </div>
+    </div>
+
+    <div class="MaterialCard" id="Products">
+    </div>
+
+
+    <!-------------------------------------------------------->
+    <!--                  -->
+    <!--  begin templates -->
+    <!--                  -->
+
+    <div id="CartItemTemplate" style="display: none;">
+        <div class="cTable {{bgcolor}}">
+            <div class="cTable__Qty">{{Qty}}</div>
+            <div class="cTable__Name">{{Name}}</div>
+            <div class="cTable__PriceEach">{{PriceEach}}</div>
+        </div>
+    </div>
+
+    <div id="CartItemQTYEditorTemplate" style="display: none;">
+        <input id="QtyEditor" name="QtyEdit" class="QtyEdit" type="tel" data-origvalue="{{Qty}}" data-name="{{Name}}" maxlength="2" value="{{Qty}}" onblur='CartQTYCloseEdit(this)' />
+    </div>
+
+    <div id="ProductTemplate" style="display: none;">
+        <div class="pTable">
+            <div class="pTable__Image"><img src="pics/{{Image}}"></div>
+            <div class="pTable__Info">
+                <h1>{{Name}}</h1>
+                <p class="Desc">{{Desc}}</p>
+                <p class="PriceEach">${{PriceEach}}</p>
+            </div>
+            <div class="pTable__AddToCart">
+                <button class="AddToCartButton" onclick="CartDemoAdd('{{Name}}', {{PriceEach}})">add to cart</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------------------------------------------->
+    <!--                  -->
+    <!--  begin scripts   -->
+    <!--                  -->
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="ezCart.js"></script>
+    <script src="CartDemo.js"></script>
+</body>
+</html>
